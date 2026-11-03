@@ -14,7 +14,7 @@ padding: 0;
 
 /* Definimos el tipo de letra por defecto */
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif,;
 }
 
 /* Los títulos de primer nivel tendrán una pequeña sombra
@@ -24,10 +24,7 @@ h1{
   color: #333;
   text-shadow: 0px 1px 3px #FFFFFF;
   font-family: sans-serif;
-  left: 0px;
-  bottom: 20px;
-  margin-bottom: 0px;
-  text-align: left;
+  
 }
 
 /* Las líneas horizontales las pondremos con puntos de 1px,
@@ -59,13 +56,8 @@ hr{
    Le he puesto un gradiente que comienza al 85% del relleno verde.
    Se le pone un color de fondo liso por si el navegador no admite
    los degradados*/
-.cajaRedonda{
-  float:left;
-  position: relative;
-  left: 0px;
-  margin-left: 5px; 
-  height: 100px;
-  width: 926px;
+header{ 
+  height: 10vh;
   background: -webkit-linear-gradient(#3E9722 85%, #CAE646);
   background: -moz-linear-gradient(#3E9722 85%, #CAE646);
   background: -o-linear-gradient(#3E9722 85%, #CAE646);
@@ -74,7 +66,7 @@ hr{
   -moz-border-radius: 15px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
-  padding: 20px 20px 0px 20px;
+  padding: 1rem;
 }
 
 /* Contenedor del logotipo */
@@ -104,18 +96,17 @@ hr{
 */
 
 /* Contenedor para las distintas opciones que compondrá el menú*/
-.menu{  
-  float: right;
+
+
+/* Definimos el tipo de lista desordenada */
+.menu ul{
+  
   position: absolute;
   margin-right: 15px;
   right: 0px;
   bottom: -15px;
   margin-bottom: 0px;
-}
 
-/* Definimos el tipo de lista desordenada */
-.menu ul{
-  margin-right: 0;
   padding: 0; 
   list-style: none; 
   float:right; 
@@ -185,8 +176,6 @@ hr{
   border-radius: 5px;
   -webkit-border-radius: 5px;
   box-shadow: 0px 0px 20px #3c74e6;
-  -moz-box-shadow: ,0px 0px 20px #3c74e6;
-  -webkit-box-shadow: ,0px 0px 20px #3c74e6;
   background: -webkit-linear-gradient(left, #e58c24, #FFFFFF, #e58c24);
   background: -moz-linear-gradient(left, #e58c24, #FFFFFF, #e58c24);
   background: -o-linear-gradient(left, #e58c24, #FFFFFF, #e58c24);
