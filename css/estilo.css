@@ -15,6 +15,11 @@ padding: 0;
 /* Definimos el tipo de letra por defecto */
 body{
   font-family: Arial, Helvetica, sans-serif,;
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "aside main aside"
+    "footer footer footer";
 }
 
 /* Los títulos de primer nivel tendrán una pequeña sombra
@@ -22,9 +27,7 @@ body{
   por 20px*/
 h1{
   color: #333;
-  text-shadow: 0px 1px 3px #FFFFFF;
   font-family: sans-serif;
-  
 }
 
 /* Las líneas horizontales las pondremos con puntos de 1px,
@@ -41,12 +44,13 @@ hr{
 }
 
 /* Sombra utilizada en la cabecera y en los subtítulos de la página */
+/*
 .sombraD{
   box-shadow: 3px 3px 4px #b1b3a2;
   -moz-box-shadow: 3px 3px 4px #b1b3a2;
   -webkit-box-shadow: 3px 3px 4px #b1b3a2;
 }
-
+*/
 
 
 /* Contenedor para el 'membrete' con su logo y el menú */
@@ -57,15 +61,14 @@ hr{
    Se le pone un color de fondo liso por si el navegador no admite
    los degradados*/
 header{ 
+  display: flex;
   height: 10vh;
-  background: -webkit-linear-gradient(#3E9722 85%, #CAE646);
+  /* background: -webkit-linear-gradient(#3E9722 85%, #CAE646);
   background: -moz-linear-gradient(#3E9722 85%, #CAE646);
   background: -o-linear-gradient(#3E9722 85%, #CAE646);
-  background: linear-gradient(#3E9722 85%, #CAE646);
-  background-color: #3E9722;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
+  background: linear-gradient(#3E9722 85%, #CAE646); */
+  border-bottom: solid;
+  border-color:  #3E9722;
   padding: 1rem;
 }
 
@@ -101,7 +104,6 @@ header{
 /* Definimos el tipo de lista desordenada */
 .menu ul{
   
-  position: absolute;
   margin-right: 15px;
   right: 0px;
   bottom: -15px;
@@ -109,7 +111,6 @@ header{
 
   padding: 0; 
   list-style: none; 
-  float:right; 
 }
 
 /* Cada elemento de la lista tendrá un tamaño determinado
@@ -119,7 +120,6 @@ header{
   Se le pone un color de fondo liso por si el navegador no admite
   los degradados*/
 .menu ul li {
-  float: left;
   width: 90px;
   margin-left:2px;
   background: -webkit-linear-gradient(left, #CAE646, #FFFFFF, #CAE646);
