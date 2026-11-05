@@ -187,3 +187,26 @@ footer{
 .peque{
   font-size: smaller;
 }
+
+/*RESPONSIVE************************************************************************************/
+
+/*Diseño para móvil*/
+@media (max-width: 40rem){
+  body{
+    grid-template-areas: 
+    "header"
+    "izq"
+    "main"
+    "der"
+    "footer";
+    grid-template-columns: 1fr
+    /* grid-template-rows: 13vh 1fr 5vh; */
+  }
+}
+
+/*Diseño para tablet*/
+
+
+/*Diseño escritorio estándar*/
+
+/*Diseño escritorio Grande*/

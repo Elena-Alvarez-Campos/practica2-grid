@@ -1,0 +1,246 @@
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: "Montserrat", sans-serif;
+} 
+* a{
+  color: green;
+}
+
+body{
+    padding: 1rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "izq"
+    "main"
+    "der"
+    "footer";
+    grid-template-columns: 1fr
+}
+form{
+    display: flex;
+    width: 100%;
+    
+}
+/*Correspondientes de la plantilla*/
+header { grid-area: header; }
+#izquierda { grid-area: izq; }
+#derecha { grid-area: der; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+
+/*HEADER****************************************************************************************/
+
+header{ 
+  display: flex;
+  flex-direction: column;
+  align-items:end;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 0.15rem #3E9722;
+  padding: 0rem 1rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Inicluye el logo principal y el nombre de la página*/
+.logo{
+  width: 11rem; 
+  padding-bottom: 0.25rem;
+}
+/*Nombre de la web debajo del título*/
+.subtitulo{
+  color: #333;
+  text-align: left;
+}
+
+/*IZQUIERDA***************************************************************************/
+
+#izquierda{
+  display: flex;
+  flex-direction: column;
+}
+/* títulos de la lista de unidades*/
+#izquierda * dt{
+  font-weight: bold;
+  color: #3E9722;
+}
+/* Enlaces/descripción de las unidades*/
+#izquierda * dd a{
+  color: #333;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+}
+/*cambio de color de las descripcones*/
+#izquierda * dd a:hover{
+  color: #3E9722;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+}
+/* Definimos el tipo de lista para el menú */
+.menu ul{
+  /* margin-right: 1rem; */
+  list-style: none; 
+  display: flex;
+  flex-direction: row;
+}
+/*Desfine cada elemento del menú*/
+.menu ul li {
+  /* width: 90px; */
+  margin-left:0.25rem;
+  color:#FFFFFF;
+  background-color: #3E9722;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+} 
+/* Enlaces del menú*/
+.menu ul li a {
+  color: #FFFFFF;
+  display: block; 
+  padding: 0.25rem;
+  text-decoration: none; 
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+} 
+/*cambio color menú*/
+.menu ul li a:hover {
+  background-color: #e58c24;
+}
+/*Opción por defecto del menú*/
+#activo {
+
+  background-color: #e58c24;
+  color: black;
+}
+
+
+#acceder{
+  background-color: #e58c24;
+  border-style: none;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  color:#FFFFFF;
+  font-weight: bold;
+  max-width: 55%;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.separa{
+  display: flex;
+  flex-direction: column;
+}
+input{
+  margin: 0.25rem 0rem;
+}
+/*CENTRO****************************************************************************************/
+/* Contenedor de la columna central con el tamaño y padding izquierdo
+  determinados en la tarea */
+#centro p{
+  padding: 0.5rem;
+}
+#centro h4{
+  color: #3E9722;
+}
+#centro ol{
+  padding-left: 2rem;
+}
+/* Los listados tendrán un tipo de letra normal y de color negro */
+#centro li{
+
+  color: black;
+}
+/*DERECHA***************************************************************************************/
+#derecha{
+  padding-bottom: 1rem;
+}
+/*Lista sin puntos*/
+#idli{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+  list-style:none;
+}
+/*FOOTER****************************************************************************************/
+footer{
+  border-top: solid 0.15rem #3E9722 ;
+  align-content: center;
+}
+/* Los listados y los enlaces que contengan saldrán en verde y con letra pequeña */
+.cajaSecundaria * li,
+.cajaSecundaria * li a{
+  color: #3E9722;
+  font-size: small;
+}
+
+
+/*GENERALES*************************************************************************************/
+/*Títulos verdes*/
+.subtitu{
+  padding: 0.5rem;
+  background-color: #3E9722;
+  color: white;
+  font: 0.9em/1.4 Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  margin: 1rem 0rem;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+}
+/*marca como cursiva*/
+.italica{
+  font-style: italic;
+}
+/*hace la letra más peque*/
+.peque{
+  font-size: smaller;
+}
+
+/*RESPONSIVE************************************************************************************/
+
+/*Diseño para móvil*/
+@media (min-width: 48rem){
+  body{
+    padding: 0%;
+    grid-template-areas: 
+        "header header header"
+        "izq main der"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 13vh 1fr 5vh;
+  }
+  header{
+    flex-direction: row;
+    align-items: end;
+    
+  }
+  #idli{
+    grid-template-columns: 1fr;
+  }
+  .subtitu{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #izquierda, #derecha{
+
+  padding: 0rem 1rem;
+  }
+}
+
+/*Diseño para tablet*/
+@media (min-width: 48rem){
+    
+}
+
+/*Diseño escritorio estándar*/
+
+/*Diseño escritorio Grande*/
