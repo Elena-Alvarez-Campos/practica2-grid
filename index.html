@@ -4,14 +4,17 @@
         <title>Tarea 4 Dise&ntilde;o</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Spotify Premium UI - Sesión 1 Flexbox</title>
+        <title>Sesión 2 Grid</title>
         <link rel="stylesheet" href="css/estilo.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header class="cajaRedonda sombraD">
+        <header class="cajaRedonda">
             <div class="logo">
                 <h1>Todo FP</h1>
-            <p class="subtitulo">www.educacion.gob.es</p>     
+                <p class="subtitulo">www.educacion.gob.es</p>     
             </div>
             <nav class="menu">
                 <ul>
@@ -23,9 +26,8 @@
                 </ul>
             </nav>
         </header>
-        <main id="cuerpo">
             <aside id="izquierda">
-                <h2 class="subtitu sombraD">
+                <h2 class="subtitu">
                         ÁREA DE USUARIOS
                 </h2>
                 <form class="separa" method="post" action="#">
@@ -36,7 +38,7 @@
                     <input id="acceder" name="Acceder" type="submit" />
                     <a href="">Olvidate la contraseña</a>
                 </form>
-                <h2 class="subtitu sombraD">UNIDADES DE TRABAJO</h2>
+                <h2 class="subtitu">UNIDADES DE TRABAJO</h2>
                 <dl>
                     <dt>DIW01, 2011</dt>
                     <dd><a href="">Planificación de interfaces gráficas...</a></dd>
@@ -51,24 +53,24 @@
                 </dl>
             </aside>
             <main iv id="centro">
-                <h2 class="subtitu sombraD">
+                <h2 class="subtitu">
                     <span>¡BIENVENIDOS A TODOFP!</span>
                     <span class="fecha">Oct. 10, 2011</span>
                 </h2>
-                <div class="logoFP">FP</div>
                 <p>FP a distancia. Esta oferta está; dirigida especialmente a aquellaspersonas que, por diferentes razones (no solo laborales) no pueden cursar en los centros educativos, y en el horario presencial, la <a href="https://www.educacion.gob.es/fponline.html">Formación Profesional</a>. Por tanto, mayoritariamente será el colectivo de personas adultas el destinatario de esta modalidad de enseñanza. Toda la información desde la web: <a href="https://www.educacion.gob.es/fponline.html">FP online</a>. ¡Matricúlate!</p>
                 <p class="peque">Realizado por Manuel Vieites <a href="http://www.mecd.gob.es/portada-mecd/">Todo FP</a> | <a href="http://www.mecd.gob.es/educacion-mecd/">Educación</a></p>
-                <h2 class="subtitu sombraD">
+                
+                <h2 class="subtitu">
                     <span>DIW04. HOJAS DE ESTILOS.</span>
                     <span class="fecha">Oct. 10, 2011</span>
                 </h2>
                 <article class="italica">"Orden EDU/2887/2010, de 2 de noviembre, por la que se establece el currículo del ciclo formativo de Grado Superior correspondiente al título de Técnico Superior en Desarrollo de Aplicaciones Web."</article>
-                <p>Técnicas, procedimiento y actitudes relacionadas:</p>
+                <h4>Técnicas, procedimiento y actitudes relacionadas:</h4>
                     <ol>
                         <li>Crear y vincular hojas de estilo</li>
                         <li>Crear y vincular hojas de estilo en cascada externa</li>
                     </ol>
-                <p>Conceptos soporte relacionados:</p>
+                <h4>Conceptos soporte relacionados:</h4>
                 <ol>
                     <li>Estilos en línea basados en etiquetas y en clases</li>
                     <li>Hojas de estilo auditivas</li>
@@ -76,9 +78,10 @@
                     <li>Herramientas y test de verificaci&oacute;n</li>
                 </ol>
                 <p class="peque">Realizado por Manuel Vieites <a href="">DIW</a> | <a href="http://www.mecd.gob.es/portada-mecd/">Todo FP</a></p>
+                
             </main>
             <aside id="derecha">
-                <h2 class="subtitu sombraD">WEBS DE INTERÉS</h2>
+                <h2 class="subtitu">WEBS DE INTERÉS</h2>
                 <ul id="idli">
                     <li><a href="http://www.mecd.gob.es/portada-mecd/">TodoFP</a></li>
                     <li><a href="https://www.educacion.gob.es/fponline.html">FP on line</a></li>
@@ -89,7 +92,6 @@
                     <img src="img/imagen.jpg" style="width: 95px; height:478px;" alt="TodoFP te ofrece la libertad" title="TodoFP es sin&oacute;nimo de libertad" />
                 </div> -->
             </aside>
-        </main>
         <footer id="pie">
             <!-- <div class="esquinas"></div> -->
             <div class="cajaSecundaria">
