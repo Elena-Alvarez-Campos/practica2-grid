@@ -1,45 +1,29 @@
+@charset "UTF-8";
 *, *::before, *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-font-family: "Montserrat", sans-serif;
-} 
-* a{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+* a {
   color: var(--co-sys-color-primary);
 }
 
-body{
-    padding: var(--space-l);
-    min-height: 100vh;
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "izq"
-    "main"
-    "der"
-    "footer";
-    grid-template-columns: 1fr;
-    background-color: var(--co-sys-color-background);
-    color: var(--co-sys-color-text-dark);
+body {
+  padding: var(--space-l);
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: "header" "izq" "main" "der" "footer";
+  grid-template-columns: 1fr;
+  background-color: var(--co-sys-color-background);
+  color: var(--co-sys-color-text-dark);
 }
-form{
-    display: flex;
-    width: 100%;
-    
-}
-/*Correspondientes de la plantilla*/
-header { grid-area: header; }
-#izquierda { grid-area: izq; }
-#derecha { grid-area: der; }
-main { grid-area: main; }
-footer { grid-area: footer; }
 
-/*HEADER****************************************************************************************/
-
-header{ 
+header {
   display: flex;
   flex-direction: column;
-  align-items:end;
+  align-items: end;
   justify-content: space-between;
   align-items: center;
   border-bottom: solid var(--space-xs) var(--co-sys-color-primary);
@@ -48,144 +32,162 @@ header{
   margin-bottom: var(--space-l);
 }
 
+/*Correspondientes de la plantilla*/
+header {
+  grid-area: header;
+}
+
+#izquierda {
+  grid-area: izq;
+}
+
+#derecha {
+  grid-area: der;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/*HEADER****************************************************************************************/
 /* Inicluye el logo principal y el nombre de la página*/
-.logo{
-  width: 1var(--space-l); 
+.logo {
+  width: 1var --space-l;
   padding-bottom: var(--space-s);
 }
+
 /*Nombre de la web debajo del título*/
-.subtitulo{
+.subtitulo {
   color: var(--co-sys-color-text-dark);
   text-align: left;
 }
 
 /*IZQUIERDA***************************************************************************/
-
-#izquierda{
+#izquierda {
   display: flex;
   flex-direction: column;
 }
+
 /* títulos de la lista de unidades*/
-#izquierda * dt{
+#izquierda * dt {
   font-weight: bold;
   color: var(--co-sys-color-primary);
 }
+
 /* Enlaces/descripción de las unidades*/
-#izquierda * dd a{
+#izquierda * dd a {
   color: var(--co-sys-color-text-dark);
   text-decoration: none;
   padding-bottom: var(--space-m);
 }
+
 /*cambio de color de las descripcones*/
-#izquierda * dd a:hover{
+#izquierda * dd a:hover {
   color: var(--co-sys-color-primary);
   text-decoration: none;
   padding-bottom: var(--space-m);
 }
+
 /* Definimos el tipo de lista para el menú */
-.menu ul{
+.menu ul {
   /* margin-right: var(--space-l); */
-  list-style: none; 
+  list-style: none;
   display: flex;
   flex-direction: row;
 }
-/*Desfine cada elemento del menú*/
 .menu ul li {
   /* width: 90px; */
-  margin-left:var(--space-s);
-  color:var(--co-sys-color-text-light);
+  margin-left: var(--space-s);
+  color: var(--co-sys-color-text-light);
   background-color: var(--co-sys-color-primary);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
-} 
-/* Enlaces del menú*/
+}
 .menu ul li a {
   color: var(--co-sys-color-text-light);
-  display: block; 
+  display: block;
   padding: var(--space-s);
-  text-decoration: none; 
+  text-decoration: none;
   font-size: var(--font-s);
   font-weight: bold;
   text-align: center;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
-} 
-/*cambio color menú*/
+}
 .menu ul li a:hover {
   background-color: var(--co-sys-color-primary-hover);
 }
-/*Opción por defecto del menú*/
-#activo {
-
+.menu ul li #activo {
   background-color: var(--co-sys-color-primary-hover);
   color: var(--co-sys-color-text-dark);
 }
 
-
-#acceder{
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+form input {
+  margin: var(--space-s) 0rem;
+}
+form #acceder {
   background-color: var(--co-sys-color-primary-hover);
   border-style: none;
   padding: var(--space-special);
   border-radius: var(--border-radius);
-  color:var(--co-sys-color-text-light);
+  color: var(--co-sys-color-text-light);
   font-weight: bold;
   max-width: 55%;
   display: block;
   width: 100%;
   text-align: center;
 }
-.separa{
-  display: flex;
-  flex-direction: column;
-}
-input{
-  margin: var(--space-s) 0rem;
-}
+
 /*CENTRO****************************************************************************************/
 /* Contenedor de la columna central con el tamaño y padding izquierdo
   determinados en la tarea */
-#centro p{
+#centro p {
   padding: var(--space-m);
 }
-#centro h4{
+#centro h4 {
   color: var(--co-sys-color-primary);
 }
-#centro ol{
+#centro ol {
   padding-left: var(--space-xl);
 }
-/* Los listados tendrán un tipo de letra normal y de color negro */
-#centro li{
-
+#centro ol li {
   color: var(--co-sys-color-text-dark);
 }
+
 /*DERECHA***************************************************************************************/
-#derecha{
+#derecha {
   padding-bottom: var(--space-l);
 }
+#derecha #idli {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  list-style: none;
+}
+
 /*Lista sin puntos*/
-#idli{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-
-  list-style:none;
-}
 /*FOOTER****************************************************************************************/
-footer{
-  border-top: solid var(--space-xs) var(--co-sys-color-primary) ;
+footer {
+  border-top: solid var(--space-xs) var(--co-sys-color-primary);
   align-content: center;
+  padding-top: var(--space-m);
 }
-/* Los listados y los enlaces que contengan saldrán en verde y con letra pequeña */
-.cajaSecundaria * li,
-.cajaSecundaria * li a{
+footer a {
   color: var(--co-sys-color-primary);
-  font-size: var(--font-s);
 }
-
 
 /*GENERALES*************************************************************************************/
 /*Títulos verdes*/
-.subtitu{
+.subtitu {
   padding: var(--space-m);
   background-color: var(--co-sys-color-primary);
   color: var(--co-sys-color-text-light);
@@ -195,61 +197,53 @@ footer{
   border-top-right-radius: var(--border-radius);
   margin: var(--space-l) 0rem;
   width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
+
 /*marca como cursiva*/
-.italica{
+.italica {
   font-style: italic;
 }
+
 /*hace la letra más peque*/
-.peque{
-  font-size: var(--font-s)er;
+.peque {
+  font-size: var(--font-s);
 }
 
 /*RESPONSIVE************************************************************************************/
-
 /*Diseño para móvil*/
-@media (min-width: 48rem){
-  body{
+@media (min-width: 48rem) {
+  body {
     padding: 0%;
-    grid-template-areas: 
-        "header header header"
-        "izq main der"
-        "footer footer footer";
+    grid-template-areas: "header header header" "izq main der" "footer footer footer";
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 13vh 1fr 5vh;
   }
-  header{
+  header {
     flex-direction: row;
     align-items: end;
-    
   }
-  #idli{
-    grid-template-columns: 1fr;
-  }
-  .subtitu{
+  .subtitu {
     flex-direction: row;
     justify-content: space-between;
   }
-  #izquierda, #derecha{
-
-  padding: 0rem var(--space-l);
+  #izquierda #idli, #derecha #idli {
+    grid-template-columns: 1fr;
+  }
+  #izquierda, #derecha {
+    padding: 0rem var(--space-l);
   }
 }
-
 /*Diseño para tablet*/
-@media (prefers-color-scheme: dark){
-  *{
+@media (prefers-color-scheme: dark) {
+  * {
     --co-sys-color-background: var(--co-sys-color-background-dark);
     --co-sys-color-primary: var(--co-sys-color-primary-dark);
     --co-sys-color-primary-hover: var(--co-sys-color-primary-hover-dark);
     --co-sys-color-background: var(--co-sys-color-background-dark);
     --co-sys-color-text-dark: var(--co-sys-color-text-light);
-
   }
 }
-
 /*Diseño escritorio estándar*/
-
-/*Diseño escritorio Grande*/
+/*Diseño escritorio Grande*//*# sourceMappingURL=qstyle.css.map */
