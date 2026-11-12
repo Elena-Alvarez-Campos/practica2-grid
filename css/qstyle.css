@@ -5,11 +5,11 @@ padding: 0;
 font-family: "Montserrat", sans-serif;
 } 
 * a{
-  color: green;
+  color: var(--co-sys-color-primary);
 }
 
 body{
-    padding: 1rem;
+    padding: var(--space-l);
     min-height: 100vh;
     display: grid;
     grid-template-areas: 
@@ -18,7 +18,9 @@ body{
     "main"
     "der"
     "footer";
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+    background-color: var(--co-sys-color-background);
+    color: var(--co-sys-color-text-dark);
 }
 form{
     display: flex;
@@ -40,20 +42,20 @@ header{
   align-items:end;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 0.15rem #3E9722;
-  padding: 0rem 1rem;
-  padding-top: 1rem;
-  margin-bottom: 1rem;
+  border-bottom: solid var(--space-xs) var(--co-sys-color-primary);
+  padding: 0rem var(--space-l);
+  padding-top: var(--space-l);
+  margin-bottom: var(--space-l);
 }
 
 /* Inicluye el logo principal y el nombre de la página*/
 .logo{
-  width: 11rem; 
-  padding-bottom: 0.25rem;
+  width: 1var(--space-l); 
+  padding-bottom: var(--space-s);
 }
 /*Nombre de la web debajo del título*/
 .subtitulo{
-  color: #333;
+  color: var(--co-sys-color-text-dark);
   text-align: left;
 }
 
@@ -66,23 +68,23 @@ header{
 /* títulos de la lista de unidades*/
 #izquierda * dt{
   font-weight: bold;
-  color: #3E9722;
+  color: var(--co-sys-color-primary);
 }
 /* Enlaces/descripción de las unidades*/
 #izquierda * dd a{
-  color: #333;
+  color: var(--co-sys-color-text-dark);
   text-decoration: none;
-  padding-bottom: 0.5rem;
+  padding-bottom: var(--space-m);
 }
 /*cambio de color de las descripcones*/
 #izquierda * dd a:hover{
-  color: #3E9722;
+  color: var(--co-sys-color-primary);
   text-decoration: none;
-  padding-bottom: 0.5rem;
+  padding-bottom: var(--space-m);
 }
 /* Definimos el tipo de lista para el menú */
 .menu ul{
-  /* margin-right: 1rem; */
+  /* margin-right: var(--space-l); */
   list-style: none; 
   display: flex;
   flex-direction: row;
@@ -90,42 +92,42 @@ header{
 /*Desfine cada elemento del menú*/
 .menu ul li {
   /* width: 90px; */
-  margin-left:0.25rem;
-  color:#FFFFFF;
-  background-color: #3E9722;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  margin-left:var(--space-s);
+  color:var(--co-sys-color-text-light);
+  background-color: var(--co-sys-color-primary);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
 } 
 /* Enlaces del menú*/
 .menu ul li a {
-  color: #FFFFFF;
+  color: var(--co-sys-color-text-light);
   display: block; 
-  padding: 0.25rem;
+  padding: var(--space-s);
   text-decoration: none; 
-  font-size: small;
+  font-size: var(--font-s);
   font-weight: bold;
   text-align: center;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
 } 
 /*cambio color menú*/
 .menu ul li a:hover {
-  background-color: #e58c24;
+  background-color: var(--co-sys-color-primary-hover);
 }
 /*Opción por defecto del menú*/
 #activo {
 
-  background-color: #e58c24;
-  color: black;
+  background-color: var(--co-sys-color-primary-hover);
+  color: var(--co-sys-color-text-dark);
 }
 
 
 #acceder{
-  background-color: #e58c24;
+  background-color: var(--co-sys-color-primary-hover);
   border-style: none;
-  padding: 0.2rem;
-  border-radius: 0.5rem;
-  color:#FFFFFF;
+  padding: var(--space-special);
+  border-radius: var(--border-radius);
+  color:var(--co-sys-color-text-light);
   font-weight: bold;
   max-width: 55%;
   display: block;
@@ -137,28 +139,28 @@ header{
   flex-direction: column;
 }
 input{
-  margin: 0.25rem 0rem;
+  margin: var(--space-s) 0rem;
 }
 /*CENTRO****************************************************************************************/
 /* Contenedor de la columna central con el tamaño y padding izquierdo
   determinados en la tarea */
 #centro p{
-  padding: 0.5rem;
+  padding: var(--space-m);
 }
 #centro h4{
-  color: #3E9722;
+  color: var(--co-sys-color-primary);
 }
 #centro ol{
-  padding-left: 2rem;
+  padding-left: var(--space-xl);
 }
 /* Los listados tendrán un tipo de letra normal y de color negro */
 #centro li{
 
-  color: black;
+  color: var(--co-sys-color-text-dark);
 }
 /*DERECHA***************************************************************************************/
 #derecha{
-  padding-bottom: 1rem;
+  padding-bottom: var(--space-l);
 }
 /*Lista sin puntos*/
 #idli{
@@ -170,28 +172,28 @@ input{
 }
 /*FOOTER****************************************************************************************/
 footer{
-  border-top: solid 0.15rem #3E9722 ;
+  border-top: solid var(--space-xs) var(--co-sys-color-primary) ;
   align-content: center;
 }
 /* Los listados y los enlaces que contengan saldrán en verde y con letra pequeña */
 .cajaSecundaria * li,
 .cajaSecundaria * li a{
-  color: #3E9722;
-  font-size: small;
+  color: var(--co-sys-color-primary);
+  font-size: var(--font-s);
 }
 
 
 /*GENERALES*************************************************************************************/
 /*Títulos verdes*/
 .subtitu{
-  padding: 0.5rem;
-  background-color: #3E9722;
-  color: white;
+  padding: var(--space-m);
+  background-color: var(--co-sys-color-primary);
+  color: var(--co-sys-color-text-light);
   font: 0.9em/1.4 Arial, Helvetica, sans-serif;
   font-weight: bolder;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  margin: 1rem 0rem;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  margin: var(--space-l) 0rem;
   width: 100%;
   display:flex;
   flex-direction: column;
@@ -202,7 +204,7 @@ footer{
 }
 /*hace la letra más peque*/
 .peque{
-  font-size: smaller;
+  font-size: var(--font-s)er;
 }
 
 /*RESPONSIVE************************************************************************************/
@@ -232,13 +234,20 @@ footer{
   }
   #izquierda, #derecha{
 
-  padding: 0rem 1rem;
+  padding: 0rem var(--space-l);
   }
 }
 
 /*Diseño para tablet*/
-@media (min-width: 48rem){
-    
+@media (prefers-color-scheme: dark){
+  *{
+    --co-sys-color-background: var(--co-sys-color-background-dark);
+    --co-sys-color-primary: var(--co-sys-color-primary-dark);
+    --co-sys-color-primary-hover: var(--co-sys-color-primary-hover-dark);
+    --co-sys-color-background: var(--co-sys-color-background-dark);
+    --co-sys-color-text-dark: var(--co-sys-color-text-light);
+
+  }
 }
 
 /*Diseño escritorio estándar*/

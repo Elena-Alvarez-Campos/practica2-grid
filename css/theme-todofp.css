@@ -1,0 +1,51 @@
+:root {
+/*COLORES 
+========================================== */
+--co-black:#000;
+--co-white: #fff;
+--co-teal-600: #418b2a;
+--co-teal-500: #3E9722;
+--co-pink-600: #e58c24;
+--co-pink-500: #f7992d;
+--co-zinc-900: #18181b;
+/*MEDIDAS
+==========================================*/
+
+--space-1: 2rem;
+--space-2: 1rem;
+--space-3: 0.5rem;
+--space-4: 0.25rem;
+--space-5: 0.2rem;
+--space-6: 0.15rem;
+
+
+--font-s: 0.8rem;
+
+/* ==========================================
+
+2. TOKENS SEMÁNTICOS (Alias)
+Tienen un propósito claro. Apuntan a los globales.
+========================================== */
+/* Colores de marca/acción */
+--co-sys-color-primary: var(--co-teal-600);
+--co-sys-color-primary-hover: var(--co-pink-600);
+/*Modo oscuro*/
+--co-sys-color-primary-dark: var(--co-teal-500);
+--co-sys-color-primary-hover-dark: var(--co-pink-500);
+
+/* Fondos y textos */
+--co-sys-color-background: var(--co-white);
+--co-sys-color-background-dark: var(--co-zinc-900);
+/*Modo oscuro*/
+--co-sys-color-text-light: var(--co-white);
+--co-sys-color-text-dark: var(--co-black);
+/* Espaciados y más */
+--space-xl: var(--space-1);
+--space-l: var(--space-2);
+--space-m: var(--space-3);
+--space-s: var(--space-4);
+--space-xs: var(--space-6);
+--space-special: var(--space-5);
+--border-radius: var(--space-3);
+--font-size-small: var(--font-s);
+}
