@@ -9,175 +9,153 @@ font-family: "Montserrat", sans-serif;
 }
 
 body{
-    padding: var(--space-l);
-    min-height: 100vh;
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "izq"
-    "main"
-    "der"
-    "footer";
-    grid-template-columns: 1fr;
-    background-color: var(--co-sys-color-background);
-    color: var(--co-sys-color-text-dark);
-}
-header{ 
-  display: flex;
-  flex-direction: column;
-  align-items:end;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: solid var(--space-xs) var(--co-sys-color-primary);
-  padding: 0rem var(--space-l);
-  padding-top: var(--space-l);
-  margin-bottom: var(--space-l);
-}
-
-/*Correspondientes de la plantilla*/
-header { grid-area: header; }
-#izquierda { grid-area: izq; }
-#derecha { grid-area: der; }
-main { grid-area: main; }
-footer { grid-area: footer; }
-
-/*HEADER****************************************************************************************/
-
-
-
-/* Inicluye el logo principal y el nombre de la página*/
-.logo{
-  width: 1var(--space-l); 
-  padding-bottom: var(--space-s);
-}
-/*Nombre de la web debajo del título*/
-.subtitulo{
+  padding: var(--space-l);
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "izq"
+  "main"
+  "der"
+  "footer";
+  grid-template-columns: 1fr;
+  background-color: var(--co-sys-color-background);
   color: var(--co-sys-color-text-dark);
-  text-align: left;
-}
+  header { grid-area: header; }
+  #izquierda { grid-area: izq; }
+  #derecha { grid-area: der; }
+  main { grid-area: main; }
+  footer { grid-area: footer; }
 
-/*IZQUIERDA***************************************************************************/
-
-#izquierda{
-  display: flex;
-  flex-direction: column;
-}
-/* títulos de la lista de unidades*/
-#izquierda * dt{
-  font-weight: bold;
-  color: var(--co-sys-color-primary);
-}
-/* Enlaces/descripción de las unidades*/
-#izquierda * dd a{
-  color: var(--co-sys-color-text-dark);
-  text-decoration: none;
-  padding-bottom: var(--space-m);
-}
-/*cambio de color de las descripcones*/
-#izquierda * dd a:hover{
-  color: var(--co-sys-color-primary);
-  text-decoration: none;
-  padding-bottom: var(--space-m);
-}
-/* Definimos el tipo de lista para el menú */
-.menu{
-  ul{
-    /* margin-right: var(--space-l); */
-    list-style: none; 
+  header{ 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items:end;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid var(--space-xs) var(--co-sys-color-primary);
+    padding: 0rem var(--space-l);
+    padding-top: var(--space-l);
+    margin-bottom: var(--space-l);
+    .logo{
+      width: 1var(--space-l); 
+      padding-bottom: var(--space-s);
+    }
+    .subtitulo{
+      color: var(--co-sys-color-text-dark);
+      text-align: left;
+    }
+    .menu{
+      ul{
+        /* margin-right: var(--space-l); */
+        list-style: none; 
+        display: flex;
+        flex-direction: row;
   
-    li {
-      /* width: 90px; */
-      margin-left:var(--space-s);
-      color:var(--co-sys-color-text-light);
-      background-color: var(--co-sys-color-primary);
-      border-top-left-radius: var(--border-radius);
-      border-top-right-radius: var(--border-radius);
+        li {
+          /* width: 90px; */
+          margin-left:var(--space-s);
+          color:var(--co-sys-color-text-light);
+          background-color: var(--co-sys-color-primary);
+          border-top-left-radius: var(--border-radius);
+          border-top-right-radius: var(--border-radius);
       
-      a {
-        color: var(--co-sys-color-text-light);
-        display: block; 
-        padding: var(--space-s);
-        text-decoration: none; 
-        font-size: var(--font-s);
-        font-weight: bold;
-        text-align: center;
-        border-top-left-radius: var(--border-radius);
-        border-top-right-radius: var(--border-radius);
-        &:hover {background-color: var(--co-sys-color-primary-hover);}
-        
-      } 
-      #activo {
-        background-color: var(--co-sys-color-primary-hover);
-        color: var(--co-sys-color-text-dark);
+          a {
+            color: var(--co-sys-color-text-light);
+            display: block; 
+            padding: var(--space-s);
+            text-decoration: none; 
+            font-size: var(--font-s);
+            font-weight: bold;
+            text-align: center;
+            border-top-left-radius: var(--border-radius);
+            border-top-right-radius: var(--border-radius);
+            &:hover {background-color: var(--co-sys-color-primary-hover);}
+          } 
+          #activo {
+            background-color: var(--co-sys-color-primary-hover);
+            color: var(--co-sys-color-text-dark);
+          }
+        }
       }
     }
   }
-}
-
-form{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  input{
-    margin: var(--space-s) 0rem;
-  }
-  #acceder{
-    background-color: var(--co-sys-color-primary-hover);
-    border-style: none;
-    padding: var(--space-special);
-    border-radius: var(--border-radius);
-    color:var(--co-sys-color-text-light);
-    font-weight: bold;
-    max-width: 55%;
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-
-/*CENTRO****************************************************************************************/
-/* Contenedor de la columna central con el tamaño y padding izquierdo
-  determinados en la tarea */
-#centro{
-  p{
-    padding: var(--space-m);
-  }
-  h4{
-    color: var(--co-sys-color-primary);
-  }
-  ol{
-    padding-left: var(--space-xl);
-    li{
-      color: var(--co-sys-color-text-dark);
+  #izquierda{
+    display: flex;
+    flex-direction: column;
+  
+    form{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      input{
+        margin: var(--space-s) 0rem;
+      }
+      #acceder{
+        background-color: var(--co-sys-color-primary-hover);
+        border-style: none;
+        padding: var(--space-special);
+        border-radius: var(--border-radius);
+        color:var(--co-sys-color-text-light);
+        font-weight: bold;
+        max-width: 55%;
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    dt{
+      font-weight: bold;
+      color: var(--co-sys-color-primary);
+    }
+    dd{
+      a{
+        color: var(--co-sys-color-text-dark);
+        text-decoration: none;
+        padding-bottom: var(--space-m);
+        &:hover{
+          color: var(--co-sys-color-primary);
+          text-decoration: none;
+          padding-bottom: var(--space-m);
+        }
+      }
     }
   }
+  #centro{
+    p{
+      padding: var(--space-m);
+    }
+    h4{
+      color: var(--co-sys-color-primary);
+    }
+    ol{
+      padding-left: var(--space-xl);
+      li{
+        color: var(--co-sys-color-text-dark);
+      }
+    }
   
+  }
+  #derecha{
+    padding-bottom: var(--space-l);
+    #idli{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      list-style:none;
+    }
+  }
+  footer{
+    border-top: solid var(--space-xs) var(--co-sys-color-primary) ;
+    align-content: center;
+    padding-top: var(--space-m);
+    a{
+      color: var(--co-sys-color-primary);
+    }
+  }
+
 }
 
-/*DERECHA***************************************************************************************/
-#derecha{
-  padding-bottom: var(--space-l);
-  #idli{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    list-style:none;
-  }
-}
-/*Lista sin puntos*/
-
-/*FOOTER****************************************************************************************/
-footer{
-  border-top: solid var(--space-xs) var(--co-sys-color-primary) ;
-  align-content: center;
-  padding-top: var(--space-m);
-  a{
-    color: var(--co-sys-color-primary);
-  }
-}
 
 
 /*GENERALES*************************************************************************************/
@@ -216,23 +194,25 @@ footer{
         "footer footer footer";
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 13vh 1fr 5vh;
-  }
-  header{
-    flex-direction: row;
-    align-items: end;
     
+    header{
+      flex-direction: row;
+      align-items: end;
+    
+    }
+    #izquierda, #derecha{
+      #idli{
+        grid-template-columns: 1fr;
+      }
+      padding: 0rem var(--space-l);
+    }
   }
   
   .subtitu{
     flex-direction: row;
     justify-content: space-between;
   }
-  #izquierda, #derecha{
-    #idli{
-      grid-template-columns: 1fr;
-    }
-    padding: 0rem var(--space-l);
-  }
+  
 }
 
 /*Diseño para tablet*/
